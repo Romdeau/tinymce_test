@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-top:54px;
+  padding-bottom:300px; /* this needs to be bigger than footer height*/
+}

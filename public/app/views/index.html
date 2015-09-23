@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TinyMCE Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div id="wrap">
+    <nav class="navbar nvbar-default">
+      <div class="container">
+        <a class="navbar-brand" href="/">TinyMCE Test</a>
+        <ul class="nav navbar-nav pull-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HeaderLink</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="main" class="container">
+      <h4>If you can't see anything below you probably forgot to bower install</h4>
+      <div class="row">
+        <div class="col-sm-6">
+          <form method="post">
+            <textarea id="tinymcetest">
+              <h1>Header1</h1>
+              <h2>Header2</h2>
+              <h3>Header3</h3>
+              <p>
+                paragraph
+              </p>
+            </textarea>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <h1>Header1</h1>
+          <h2>Header2</h2>
+          <h3>Header3</h3>
+          <p>
+            paragraph
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <!-- footer here -->
+  </footer>
+  <script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/libs/tinymce/tinymce.js"></script>
+  <script type="text/javascript">
+      tinymce.init({
+        selector: "#tinymcetest",
+        theme: "modern",
+        plugins: [
+             "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+             "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+             "save table contextmenu directionality emoticons template paste textcolor"
+       ],
+       content_css: "/assets/libs/bootstrap/dist/css/bootstrap.min.css",
+       toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+       style_formats: [
+            {title: 'Bold text', inline: 'b'},
+            {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+            {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+            {title: 'Example 1', inline: 'span', classes: 'example1'},
+            {title: 'Example 2', inline: 'span', classes: 'example2'},
+            {title: 'Table styles'},
+            {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+        ]
+      });
+  </script>
+</body>

@@ -1,0 +1,9 @@
+{
+  "name": "tinymce_test",
+  "version": "0.1.0",
+  "description": "Just a test app for TinyMCE",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
